@@ -1,16 +1,22 @@
-watch-simulator
+heartbeat-bootcamp
 ===============
 
-This lets you protype apps for the Apple Watch. It is a template app that runs on an iPhone or iPad. Run it in Xcode and you'll get a sample counting app. 
+Special heartbeat version for the Swift Bootcamp. This includes a long press popover and NSUserDefaults storage
 
-![Apple Watch simulator on iPhone 6](http://happy.watch/s/apple-watch-simulator-on-iphone-6.jpg)
+### Where to go from here:
 
-Just another way to be ahead of the game. Can't wait to see what you build with it.
+1.) on the popover, instead of Total Beats, display Average BPM
+ 
+_HINT_: change the storage so that it is an Array. Then add to the array the bpm for each beat — rather than incrementing totalBeats
 
-![Apple Watch simulator in Xcode](http://happy.watch/s/watch-simulator-xcode.png)
+2.) add an erratic heartbeat
 
-A demo app built with the simulator: *Heartbeat*
+_HINT_: make bpm an Optional Int. If it is nil, make the duration random for each beat
 
-[![Play Video on YouTube](http://happy.watch/s/heartbeat-apple-watch-app-youtube-video.jpg)](http://bit.ly/heartbeat-video)
+3.) add a timer that changes to a random beat pattern instead of having to tap
 
-See the [code for Heartbeat on GitHub](https://github.com/happywatch/heartbeat).
+_HINTS_:
+* use NSTimer.scheduledTimerWithTimeInterval(target:selector:userInfo:repeats:)
+* use arc4random_uniform(maxvalue) to get a random number
+
+For even more features, see the [full version of Heartbeat on GitHub](https://github.com/happywatch/heartbeat).
